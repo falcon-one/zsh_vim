@@ -1,5 +1,7 @@
 # zsh_vim
 Setting file for zsh and vim
+
+
 Please make dictionary file for auto-completion
 
 mkdir -p ~/.vim/dictionary
