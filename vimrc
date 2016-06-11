@@ -10,15 +10,15 @@ syntax on
 
 if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim
-  call neobundle#begin(expand('~/.vim/bundle/'))
-  NeoBundleFetch 'hail2u/vim-css3-syntax'
-  NeoBundleFetch 'taichouchou2/html5.vim'
-  NeoBundleFetch 'taichouchou2/vim-javascript'
-  NeoBundleFetch 'scrooloose/nerdtree'
-  NeoBundleFetch 'Shougo/vimproc'
-  NeoBundleFetch 'Shougo/neocomplcache'
-  call neobundle#end()
+  call neobundle#rc(expand('~/.vim/bundle/'))
 endif
+
+NeoBundle 'hail2u/vim-css3-syntax'
+NeoBundle 'taichouchou2/html5.vim'
+NeoBundle 'taichouchou2/vim-javascript'
+NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'Shougo/vimproc'
+NeoBundle 'Shougo/neocomplcache'
 
 autocmd BufRead *.php\|*.ctp\|*.tpl :set dictionary=~/.vim/dictionaries/php.dict filetype=php
 let g:neocomplcache_enable_at_startup = 1
@@ -60,4 +60,3 @@ syn keyword htmlArg contained sizes scoped async reversed sandbox srcdoc
 syn keyword htmlArg contained hidden role
 syn match   htmlArg "\<\(aria-[\-a-zA-Z0-9_]\+\)=" contained
 syn match   htmlArg contained "\s*data-[-a-zA-Z0-9_]\+"
-
