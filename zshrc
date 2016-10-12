@@ -164,4 +164,11 @@ case ${OSTYPE} in
         ;;
 esac
 
+function cdls() {
+    # cdがaliasでループするので\をつける
+    \cd $1;
+    ls;
+}
+alias cd=cdls
+
 # vim:set ft=zsh:
