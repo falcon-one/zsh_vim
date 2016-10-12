@@ -1,18 +1,9 @@
-# 少し凝った zshrc
-# License : MIT
-# http://mollifier.mit-license.org/
-
-########################################
 # 環境変数
 export LANG=ja_JP.UTF-8
-
 
 # 色を使用出来るようにする
 autoload -Uz colors
 colors
-
-# emacs 風キーバインドにする
-bindkey -e
 
 # ヒストリの設定
 HISTFILE=~/.zsh_history
@@ -170,5 +161,7 @@ function cdls() {
     ls;
 }
 alias cd=cdls
+
+export LSCOLORS=gxfxcxdxbxegedabagacad
 
 # vim:set ft=zsh:
